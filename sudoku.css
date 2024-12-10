@@ -1,0 +1,118 @@
+body {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #fdf4c6; 
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    width: 80%;
+    max-width: 500px;
+    border: none;
+    border-top: 2px solid #ddc085; 
+    margin: 20px auto;
+}
+
+#errors {
+    color: #ff6f61;
+    font-weight: bold;
+}
+
+#board {
+    width: 90%;
+    max-width: 450px;
+    aspect-ratio: 1 / 1; 
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff7e0; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #f0d58c; 
+}
+
+.tile {
+    width: calc(100% / 9 - 2px);
+    height: calc(100% / 9 - 2px);
+    border: 1px solid #ddd;
+    font-size: clamp(14px, 2vw, 20px);
+    font-weight: bold;
+    color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffde7; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tile:hover {
+    background-color: #ffeb99; 
+    cursor: pointer;
+}
+
+#digits {
+    width: 90%;
+    max-width: 450px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff7e0; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #f0d58c; 
+}
+
+.number {
+    width: calc(100% / 9 - 4px);
+    height: calc(100% / 9 - 4px);
+    margin: 2px;
+    font-size: clamp(14px, 2vw, 20px);
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff8cc; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.number:hover {
+    background-color: #ffeb3b; 
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.number-selected {
+    background-color: #ffa726; 
+    color: #ffffff;
+    border: 1px solid #ff9800; 
+}
+
+.tile-start {
+    background-color: #fffde7; 
+    font-style: italic;
+    color: #555;
+}
+
+.horizontal-line {
+    border-bottom: 2px solid #f57c00; 
+}
+
+.vertical-line {
+    border-right: 2px solid #f57c00; 
+}
+
+@media (max-width: 768px) {
+    #board,
+    #digits {
+        max-width: 100%;
+    }
+
+    .tile,
+    .number {
+        font-size: clamp(12px, 3vw, 18px);
+    }
+}
